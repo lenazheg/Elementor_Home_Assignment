@@ -247,3 +247,5 @@ function get_related_products($post){
         )
     ]);
 }
+
+include('inc/products-shortcode.php');
