@@ -27,3 +27,21 @@ function product_function($attr = [], $content = null, $tag = '' ){
 }
 
 add_shortcode('product', 'product_function');
+
+
+
+/**
+ * Override output of [product] shortcode
+ *
+ * @param string $output The output from the shortcode
+ * @param string $tag The name of the shortcode
+ *
+ * @return string The modified output
+ */
+function overidde_product_sc( $output, $tag ) {
+    if ( $tag == 'product' ) {
+        return 'Override output of product shortcode!';
+    }
+    return $output;
+}
+add_filter('do_shortcode_tag', 'overidde_product_sc', 10, 2);

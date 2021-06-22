@@ -248,4 +248,16 @@ function get_related_products($post){
     ]);
 }
 
+
+/* Part 5 */
 include('inc/products-shortcode.php');
+
+/* Part 6*/
+function custom_mobile_address_bar() {
+    $color = "#98b3ff";
+    echo '<meta name="theme-color" content="'.$color.'">';
+    echo '<meta name="msapplication-navbutton-color" content="'.$color.'">';
+    echo '<meta name="apple-mobile-web-app-capable" content="yes">';
+    echo '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">';
+}
+add_action( 'wp_head', 'custom_mobile_address_bar' );
