@@ -252,7 +252,7 @@ function get_related_products($post){
 /* Part 5 */
 include('inc/products-shortcode.php');
 
-/* Part 6*/
+/* Part 6 */
 function custom_mobile_address_bar() {
     $color = "#98b3ff";
     echo '<meta name="theme-color" content="'.$color.'">';
@@ -261,3 +261,8 @@ function custom_mobile_address_bar() {
     echo '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">';
 }
 add_action( 'wp_head', 'custom_mobile_address_bar' );
+
+/* Part 7 */
+
+// Add product API endpoints
+get_template_part( 'api/product' );
